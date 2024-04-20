@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+
+<header>
+  {% block navPrimary %}
+    {% include "navPrimary.njk" %}
+  {% endblock %}
+</header>
+
+{% block main %}
+
+  <article class="o-wrapper p-base">
+    {{ content | safe }}
+  </article>
+{% endblock %}
+
+{% block footer %}
+  {# {% include "partials/footer.njk" %} #}
+{% endblock %}

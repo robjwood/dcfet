@@ -1,0 +1,15 @@
+/* NAV PRIMARY
+===========================================
+===========================================*/
+.c-nav-primary {
+  margin-bottom: var(--spacing-l);
+}
+
+.c-nav-primary ul {
+  list-style-type: none;
+}
+
+  .c-nav-primary [data-state="active"],
+  .c-nav-primary [aria-current="page"] {
+    font-weight: bold;
+  }    

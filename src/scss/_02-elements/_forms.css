@@ -1,0 +1,32 @@
+/* FORMS
+===========================================
+===========================================*/
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  display: none;
+}
+
+label {
+  display: block;
+}
+
+/* All inputs except button */
+/* input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"]) {
+  display: block;
+  width: 100%;
+} */
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="file"]),
+select,
+textarea {
+  padding: var(--spacing-s);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-left: inherit;
+}
