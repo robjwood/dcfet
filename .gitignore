@@ -4,3 +4,6 @@ node_modules
 # build artefacts
 /public
 
+# cached network requests generated from the 11ty-fetch plugin
+.cache
+

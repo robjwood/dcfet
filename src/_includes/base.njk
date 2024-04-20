@@ -8,10 +8,9 @@
     <title>{{ title }}</title>
   </head>
   <body>
-    <main> 
-      {% block main %}
-        {{ content | safe }}
-      {% endblock %}
-    </main> 
+    {% block main %}
+      {{ content | safe }}
+    {% endblock %}
   </body>
+  <script src="/js/main.js" ></script>
 </html>

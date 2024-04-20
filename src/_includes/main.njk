@@ -9,12 +9,15 @@ layout: base.njk
 </header>
 
 {% block main %}
-
+<main>
   <article class="o-wrapper p-base">
     {{ content | safe }}
   </article>
+</main>
 {% endblock %}
 
+<footer>
 {% block footer %}
-  {# {% include "partials/footer.njk" %} #}
+  {% include "footer.njk" %}
 {% endblock %}
+</footer>

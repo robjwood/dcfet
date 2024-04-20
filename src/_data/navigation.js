@@ -1,20 +1,16 @@
 module.exports = {
   top: [
     {
-      text: 'Elements',
-      url: '/elements/',
+      text: 'About Us',
+      url: '/about-us/',
     },
     {
-      text: 'Components',
-      url: '/components/'
+      text: 'About You',
+      url: '/about-you/'
     },
     {
-      text: 'Section',
-      url: '/section/'
-    },
-    {
-      text: 'Blog',
-      url: '/blog/'
+      text: 'Porfolio',
+      url: '/portfolio/'
     },
   ]
 };

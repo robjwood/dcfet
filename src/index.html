@@ -1,0 +1,101 @@
+---
+title: dcfet
+description: dcfet
+layout: page.njk
+---
+
+<style>
+  input[type=email]{
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    border: 1px solid #333;
+    margin: 0;
+
+    font-family: inherit;
+    font-size: 90%;
+
+    box-sizing: border-box;
+  }
+
+  /* This is our style for the invalid fields */
+  input:invalid{
+    border-color: #900;
+    background-color: #FDD;
+  }
+
+  input:focus:invalid {
+    outline: none;
+  }
+
+  /* This is the style of our error messages */
+  .error {
+    width  : 100%;
+    padding: 0;
+
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+
+    box-sizing: border-box;
+  }
+
+  .error.active {
+    padding: 0.3em;
+  }
+</style>
+
+<!--
+-->
+<h1>We Do Awesome Things</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<form action="" method="post" novalidate>
+  <label for="code">Enter your secret code</label>
+  <input type="code" id="code" name="code">
+  <button type="submit">Book</button>
+</form>
+
+<div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit!</p>
+  <button type="button">Call now</button>
+</div>
+
+<h2>We Do Really Awesome Things</h2>
+<p>Lorem ipsum dolor sit amet, <a href="#">link</a> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+{% for service in fetch %}
+  <!-- <img src="service.image" alt="service.image" width="60"> -->
+  <h3>{{ service.name }}</h3>
+  <p>{{ service.description }}</p>
+{% endfor %}
+
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <cite>Roy Barber - Dotcentric</cite>
+</blockquote>
+
+<h2>Contact About Awesomeness</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<form id="contact" action="" method="post" novalidate>
+  <label for="fullName">Your name</label>
+  <input type="fullName" id="fullName" name="fullName" placeholder="Please enter your name">
+  <span class="error" aria-live="polite"></span>
+
+  <label for="number">Your Telephone Number</label>
+  <input type="number" id="number" name="number" placeholder="Please enter your telephone number">
+  <span class="error" aria-live="polite"></span>
+
+  <label for="email">Your Email</label>
+  <input type="email" id="email" name="email" placeholder="Please enter your email">
+  <span class="error" aria-live="polite"></span>
+
+  <label for="message">Your Message</label>
+  <textarea id="message" name="message"></textarea>
+  <span class="error" aria-live="polite"></span>
+
+  <button type="submit">Submit</button>
+</form>
