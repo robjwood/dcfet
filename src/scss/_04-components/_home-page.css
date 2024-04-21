@@ -1,0 +1,29 @@
+/* HOMEPAGE
+===========================================
+===========================================*/
+.banner {
+  background-color: var(--color-accent);
+  color: var(--white);
+}
+
+  .banner > * {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-base);
+  }
+
+    .banner p {
+      font-size: var(--font-size-xl);
+      font-weight: 500;
+    }
+
+
+.services {
+  padding-block: var(--spacing-2xl);
+}
+
+  .services .columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-xl);
+  }

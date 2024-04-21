@@ -4,10 +4,8 @@
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
+  color: var(--color-primary-900);
   font-family: var(--font-accent);
   line-height: var(--line-height-xs);
   text-wrap: balance;
@@ -15,24 +13,21 @@ h6 {
 
 h1 {
   font-size: var(--font-size-2xl);
-  letter-spacing: -0.04em;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h2 {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
-  letter-spacing: -0.008em;
+  font-size: var(--font-size-2xl);
+  font-weight: 400;
 }
 
 h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+}
+
+.subheading {
+  color: var(--color-primary-300);
   font-size: var(--font-size-l);
-}
-
-h4 {
-  font-size: var(--font-size-m);
-}
-
-h5 {
-  font-size: var(--font-size-s);
+  font-weight: 300;
 }

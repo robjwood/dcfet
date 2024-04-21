@@ -1,3 +1,55 @@
+let bookForm = document.querySelector('#book');
+
+const code = document.getElementById('code');
+const codeError = document.querySelector('#code + span.error');
+
+bookForm.addEventListener('submit', function (event) {
+  let isValid = true;
+
+  if (code.value.trim() === '') {
+    codeError.textContent = 'Error: Please enter a secret code.';
+    codeError.className = 'error active';
+    isValid = false;
+  } else {
+    clearError(codeError);
+  }
+
+  if (!isValid) {
+    event.preventDefault();
+  }
+  if (isValid) {
+    // If the form is valid, display the confirmation message and hide the form
+    document.getElementById('bookConfirmation').style.display = 'block';
+    // Hide the form by setting the display property to none
+    bookForm.style.display = 'none';
+    // Prepare the form data
+    const formData = new FormData(form);
+
+    // Send the form data asynchronously
+    fetch(form.action, {
+      method: form.method,
+      body: formData
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      // Optionally, you can handle response data here
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+      // Optionally, you can display an error message to the user
+    });
+  }
+
+});
+
+function clearError(errorElement) {
+  errorElement.textContent = '';
+  errorElement.className = 'error';
+}
+
+
 let form = document.querySelector('#contact');
 
 const fullName = document.getElementById('fullName');
@@ -63,6 +115,7 @@ form.addEventListener('submit', function (event) {
   if (!isValid) {
     event.preventDefault();
   }
+
 });
 
 function clearError(errorElement) {

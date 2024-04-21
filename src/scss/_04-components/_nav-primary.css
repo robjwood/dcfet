@@ -2,14 +2,200 @@
 ===========================================
 ===========================================*/
 .c-nav-primary {
-  margin-bottom: var(--spacing-l);
+  margin-bottom: var(--spacing-xl);
 }
 
-.c-nav-primary ul {
+  .c-nav-primary > * {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+    .c-nav-primary input[type="checkbox"] {
+      display: none;
+    }
+
+    .menu-toggle input[type="checkbox"]:not(:checked) + ul {
+      display: none;
+    }
+    
+    /* If the checkbox is not checked, hide the ul */
+    input[type="checkbox"]:not(:checked) + ul {
+      display: none;
+    }
+
+
+    /* Because we are in mobile mode, we want to display it as a vertical list */
+    .c-nav-primary ul {
+      background-color: var(--color-primary-900);
+      list-style-type: none;
+      display: block;
+      padding: var(--spacing-l);
+      text-align: center;
+      width: 100%;
+    }
+
+      .c-nav-primary a {
+        color: var(--white);
+        display: block;
+        font-size: var(--font-size-s);
+        padding-block: var(--spacing-s);
+        text-decoration: none;
+      }
+
+
+/* This start to get interesting: we go into mobile phone mode */
+@media (min-width: 576px) {
+  .c-nav-primary {
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    justify-content: space-between;
+  }
+    .c-nav-primary input[type="checkbox"],
+    .c-nav-primary label {
+      display: none;
+    }
+  
+    .c-nav-primary ul {
+      background-color: transparent;
+      display: flex !important;
+      align-items: center;
+      justify-content: flex-end;
+      gap: var(--spacing-l);
+    }
+  
+    .c-nav-primary li {
+      display: inline-flex;
+    }
+  
+      .c-nav-primary [data-state="active"],
+      .c-nav-primary [aria-current="page"] {
+        font-weight: bold;
+      }
+  
+      .c-nav-primary a {
+        color: var(--color-primary-900);
+        font-size: var(--font-size-s);
+        text-decoration: none;
+      }
+  
+        .c-nav-primary a:hover {
+          text-decoration: underline;
+        }
+  
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav ul {
+    /* Make the markers disappear */
+    list-style-type: none;
+  }
+  
+  /* These two lines make the checkbox and the label disappear when we are in desktop mode. */
+  /* nav input[type="checkbox"],
+  nav label {
+    display: none;
+  } */
+}
+
+
+
+
+
+
+
+
+
+/* .c-nav-primary {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+}
+
+  .c-nav-primary ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-l);
+  }
+
+  .c-nav-primary li {
+    display: inline-flex;
+  }
+
+    .c-nav-primary [data-state="active"],
+    .c-nav-primary [aria-current="page"] {
+      font-weight: bold;
+    }
+
+    .c-nav-primary a {
+      color: var(--color-primary-900);
+      font-size: var(--font-size-s);
+      text-decoration: none;
+    }
+
+      .c-nav-primary a:hover {
+        text-decoration: underline;
+      }
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
   list-style-type: none;
 }
 
-  .c-nav-primary [data-state="active"],
-  .c-nav-primary [aria-current="page"] {
-    font-weight: bold;
-  }    
+nav input[type="checkbox"],
+nav label {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  input[type="checkbox"]:not(:checked) + ul {
+    display: none;
+  }
+
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  nav label {
+    text-align: right;
+    display: block;
+    padding: 0.5em;
+    line-height: 1.6em;
+    align-self: center;
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  nav ul:last-child {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  nav ul li {
+    margin-bottom: 0;
+    width: 100%;
+    text-align: right;
+  }
+
+  .c-nav-primary ul {
+    list-style-type: none;
+    display: block;
+    align-items: center;
+    gap: var(--spacing-l);
+  }
+} */
