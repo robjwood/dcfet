@@ -3,7 +3,7 @@ const { DateTime } = require("luxon");
 module.exports = function (eleventyConfig) {
 
   // Copy allow the following directories to be copied to the output folder 
-  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/js");
 
   // Filters

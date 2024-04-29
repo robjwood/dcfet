@@ -1,0 +1,41 @@
+/* BANNER
+===========================================
+===========================================*/
+
+.banner {
+  background-color: var(--color-accent);
+  color: var(--white);
+  padding-block: var(--spacing-xl);
+}
+
+  .banner > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-base);
+    text-align: center;
+  }
+
+  .banner p {
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+  }
+
+  .banner a {
+    flex-shrink: 0; /* Stop the button text wrapping */
+    width: 100%;
+  }
+
+  @media (min-width: 645px) {
+    .banner > * {
+      flex-direction: inherit;
+      text-align: inherit;
+    }
+    
+    .banner a {
+      width: auto;
+    }
+  }
+  
+    

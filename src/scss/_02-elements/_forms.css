@@ -15,60 +15,13 @@ label {
   display: block;
 }
 
-/* All inputs except button */
-/* input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"]) {
-  display: block;
-  width: 100%;
-} */
-input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="file"]),
-select,
-textarea {
-  padding: var(--spacing-s);
+input:user-invalid,
+textarea:user-invalid {
+  border-color: red;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-  margin-left: inherit;
-}
-
-/* Validation */
-input[type=email]{
-  -webkit-appearance: none;
-  appearance: none;
-
-  width: 100%;
-  border: 1px solid #333;
-  margin: 0;
-
-  font-family: inherit;
-  font-size: 90%;
-
-  box-sizing: border-box;
-}
-
-/* This is our style for the invalid fields */
-input:invalid{
-  border-color: #900;
-  background-color: #FDD;
-}
-
-input:focus:invalid {
-  outline: none;
-}
-
-/* This is the style of our error messages */
-.error {
-  width  : 100%;
-  padding: 0;
-
-  font-size: var(--font-size-s);
-  color: white;
-  background-color: #900;
-  border-radius: 0 0 5px 5px;
-
-  box-sizing: border-box;
-}
-
-.error.active {
-  padding: 0.3em;
+@supports not selector(:user-invalid) {
+  [data-js-enabled='false'] input:invalid {
+    border-color: red;
+  }
 }

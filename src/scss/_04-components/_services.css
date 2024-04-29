@@ -1,0 +1,22 @@
+/* SERVICES
+===========================================
+===========================================*/
+
+.services {
+  padding-block: var(--spacing-2xl);
+
+  @media (min-width: 645px) {
+    padding-block: var(--spacing-3xl);
+  }
+}
+
+  .services .columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-xl);
+    padding-block-start: var(--spacing-xl);
+
+    @media (min-width: 645px) {
+      padding-block: var(--spacing-2xl);
+    }
+  }

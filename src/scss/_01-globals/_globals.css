@@ -9,18 +9,12 @@ body {
   font-size: var(--font-size-base);
 }
 
-.flow > * + * {
-  margin-block-start: var(--flow-space, 1.5em);
-}
-
-:is(h1, h2, h3, blockquote) {
-  --flow-space: 2em;
-}
-
-:is(h1, h2, h3) + * {
-  --flow-space: 1em;
-}
-
 p {
   font-weight: 300;
 }
+
+.flow > * + * {
+  margin-block-start: var(--flow-space);
+}
+
+

@@ -5,7 +5,7 @@
 h1,
 h2,
 h3 {
-  color: var(--color-primary-900);
+  color: var(--color-primary-500);
   font-family: var(--font-accent);
   line-height: var(--line-height-xs);
   text-wrap: balance;

@@ -1,0 +1,98 @@
+/* CONTACT FORM
+===========================================
+===========================================*/
+
+.contact {
+  padding-block: var(--spacing-2xl);
+
+  @media (min-width: 645px) {
+    padding-block: var(--spacing-3xl);
+  }
+}
+
+form {
+  margin-inline: auto;
+  max-width: 580px;
+}
+
+  label {
+    color: var(--color-primary-700);
+    display: block;
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-s);
+  }
+
+  input,
+  textarea {
+    background-image: url("/images/required.png");
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-s) top 12px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:  var(--grey-100);
+    border-radius: 6px;
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-base);
+    padding-inline-end: var(--spacing-xl);
+    width: 100%;
+    
+    &::placeholder {
+      color: var(--grey-300);
+    }
+
+    &:focus-visible {
+      border-color: var(--color-primary-500);
+    }
+
+  }
+
+  .form-group {
+    position: relative;
+    text-align: initial;
+  }
+
+
+  .error {
+    color: var(--error);
+    font-size: var(--font-size-xxs);
+    margin-top: var(--spacing-s);
+  }
+
+  .error-input {
+    background-image: url("/images/error.png");
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-s) top 12px;
+    border-color: var(--error);
+  }
+
+.help-text {
+  color: var(--color-primary-300);
+  font-size: var(--font-size-xxs);
+  font-weight: 300;
+}
+
+.wrapper-submit {
+  text-align: right;
+}
+
+.btn--primary {
+  width: 100%;
+
+  @media (min-width: 645px) {
+    width: auto;
+  }
+}
+
+.confirmation {
+  background-color: #e1f3e1;
+  border: 1px solid #526a52;
+  border-radius: var(--spacing-s);
+  color: var(--black);
+  margin-block-start: var(--spacing-xl);
+  padding-block: var(--spacing-2xl);
+  padding-inline: var(--spacing-l);
+
+  @media (min-width: 645px) {
+    margin-inline: var(--spacing-l);
+  }
+}

@@ -23,7 +23,6 @@
 
 /* ELEMENTS */
 @import "_02-elements/blockquote";
-@import "_02-elements/footer";
 @import "_02-elements/forms";
 @import "_02-elements/headings";
 @import "_02-elements/links";
@@ -37,10 +36,15 @@
 
 
 /* COMPONENTS */
+@import "_04-components/banner";
+@import "_04-components/blockquote";
 @import "_04-components/buttons";
+@import "_04-components/contact-form";
 @import "_04-components/cards";
-@import "_04-components/home-page";
+@import "_04-components/footer";
 @import "_04-components/nav-primary";
+@import "_04-components/services";
 
 /* UTILITIES */
+@import "_05-utilities/max-widths";
 @import "_05-utilities/spacing";

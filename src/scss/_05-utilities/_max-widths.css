@@ -1,8 +1,16 @@
-/* WRAPPER
+/* MAX-WIDTHS
 ===========================================
 ===========================================*/
-.o-wrapper {
-  margin-inline: auto;
-  max-inline-size: 1090px;
-  padding-inline: var(--spacing-base);
+
+.max-width-s {
+  max-inline-size: 720px;
 }
+
+.max-width-m {
+  max-inline-size: 914px;
+}
+
+.max-width-l {
+  max-inline-size: 1090px;
+}
+

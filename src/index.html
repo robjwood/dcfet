@@ -5,37 +5,25 @@ layout: page.njk
 ---
 
 <section>
-  <div class="o-wrapper o-centre flow">
+  <div class="o-wrapper o-centre flow max-width-m">
     <h1>We Do Awesome things</h1>
     <p class="subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     
     <div class="promo">
-      <img src="/img/tropical-summer.png" alt="tropical-summer" width="914">
-
-      <form id="book" action="" method="post" novalidate>
-        <label for="code">Enter your secret code</label>
-        <input type="code" id="code" name="code">
-        <span class="error" aria-live="polite"></span>
-
-        <button type="submit">Book</button>
-      </form>
-    </div>
-
-    <div id="bookConfirmation" style="display: none;">
-      <p>Thank you for your submission! We will get back to you shortly.</p>
+      <img src="/images/tropical-summer.png" alt="tropical-summer">
     </div>
   </div>
 </section>
 
-<section class="banner">
+<section class="banner flow">
   <div class="o-wrapper">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit!</p>
-    <button type="button">Call now</button>
+    <p><a href="tel:123-456-7890" class="btn--primary wide">Call now</a></p>
   </div>
 </section>
 
 <section class="services flow">
-  <div class="o-centre o-block flow">
+  <div class="o-wrapper o-centre o-block flow max-width-s">
     <h2>We Do Really Awesome Things</h2>
     <p class="subheading">Lorem ipsum dolor sit amet, <a href="#">link</a> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </div>
@@ -43,40 +31,86 @@ layout: page.njk
   <div class="columns o-wrapper">
     {% for service in fetch %}
       <div class="o-centre flow">
-        <!-- <img src="service.image" alt="service.image" width="60"> -->
+        <img src="{{ service.image }}" alt="" width="150">
         <h3>{{ service.name }}</h3>
         <p>{{ service.description }}</p>
       </div>
     {% endfor %}
   </div>
-
-  <blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <cite>Roy Barber - Dotcentric</cite>
-  </blockquote>
 </section>
 
-<section class="o-wrapper flow">
-  <h2>Contact About Awesomeness</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<blockquote class="o-wrapper max-width-l quote">
+  <div>
+    <div>
+      <img src="/images/quotes.png" alt="">
+    </div>
+    <div class="flow">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <cite>Roy Barber - Dotcentric</cite>
+    </div>
+  </div>
+</blockquote>
 
-  <form id="contact" action="" method="post" novalidate>
-    <label for="fullName">Your name</label>
-    <input type="fullName" id="fullName" name="fullName" placeholder="Please enter your name">
-    <span class="error" aria-live="polite"></span>
+<section id="contact" class="contact">
+  <div class="o-wrapper o-centre flow max-width-s">
+    <h2>Contact About Awesomeness</h2>
+    <p class="subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="o-wrapper flow">
 
-    <label for="number">Your Telephone Number</label>
-    <input type="number" id="number" name="number" placeholder="Please enter your telephone number">
-    <span class="error" aria-live="polite"></span>
+      <form id="contact-form" action="" method="post" class="flow">
+        <div class="form-group">
+          <label for="name">Your name <span aria-hidden="true">(required)</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Please enter your name"
+            required
+            class="js-validate"
+          >
+          <span class="error" aria-live="polite"></span>
+        </div>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" placeholder="Please enter your email">
-    <span class="error" aria-live="polite"></span>
+        <div class="form-group">
+          <label for="number">Your Telephone Number </label>
+          <input
+            type="number"
+            id="number"
+            name="number"
+            placeholder="Please enter your telephone number"
+            required
+          >
+          <span class="error" aria-live="polite"></span>
+        </div>
 
-    <label for="message">Your Message</label>
-    <textarea id="message" name="message"></textarea>
-    <span class="error" aria-live="polite"></span>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Please enter your email"
+            required
+          >
+          <span class="error" aria-live="polite"></span>
+        </div>
 
-    <button type="submit">Submit</button>
-  </form>  
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Please enter a message"
+            required
+          >
+          </textarea>
+          <small class="help-text">Please enter as much detail as possible</small>
+          <span class="error" aria-live="polite"></span>
+        </div>
+
+        <button type="submit" class="btn--primary">Submit</button>
+      </form>
+    </div>
+  </div>
 </section>
